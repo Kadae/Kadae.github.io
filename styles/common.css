@@ -2,8 +2,8 @@
     font-family: "ProximaNova Regular";
     src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
     src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff")      format("woff"),
-         url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf")       format("truetype");
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff")      format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -11,8 +11,8 @@
     font-family: "ProximaNova Semibold";
     src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
     src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaBold/ProximaNovaBold.woff")      format("woff"),
-         url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf")       format("truetype");
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff")      format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -20,8 +20,8 @@
     font-family: "ProximaNova Bold";
     src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
     src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff")      format("woff"),
-         url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf")       format("truetype");
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff")      format("woff"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -40,6 +40,15 @@ a:link,
 a:hover,
 a:visited {/*color: #fff;*/ text-decoration: none;}
 
+@-webkit-keyframes scaleOut {
+    0%   {transform: scale(1.1,1.1);}
+    100% {transform: scale(1,1);}
+}
+@keyframes scaleOut {
+    0%   {transform: scale(1.1,1.1);}
+    100% {transform: scale(1,1);}
+}
+
 @-webkit-keyframes fadeIn {
     0%   {visibility: hidden;  opacity: 0;}
     100% {visibility: visible; opacity: 1;}
@@ -48,6 +57,37 @@ a:visited {/*color: #fff;*/ text-decoration: none;}
     0%   {visibility: hidden;  opacity: 0;}
     100% {visibility: visible; opacity: 1;}
 }
+@-webkit-keyframes fadeIn1s {
+    0%   {visibility: hidden;  opacity: 0;}
+    50%  {visibility: hidden;  opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+@keyframes fadeIn1s {
+    0%   {visibility: hidden;  opacity: 0;}
+    50%  {visibility: hidden;  opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+@-webkit-keyframes fadeInTop {
+    0%   {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    10%  {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    100% {visibility: visible; opacity: 1; margin: 0;}
+}
+@keyframes fadeInTop {
+    0%   {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    10%  {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    100% {visibility: visible; opacity: 1; margin: 0;}
+}
+@-webkit-keyframes fadeInTop1s {
+    0%   {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    50%  {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    100% {visibility: visible; opacity: 1; margin: 0;}
+}
+@keyframes fadeInTop1s {
+    0%   {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    50%  {visibility: hidden;  opacity: 0; margin: -20px 0 20px;}
+    100% {visibility: visible; opacity: 1; margin: 0;}
+}
+
 @-webkit-keyframes jumping {
     0%   {top: 24px;}
     50%  {top: 28px;}
@@ -69,6 +109,10 @@ a:visited {/*color: #fff;*/ text-decoration: none;}
     50%  {top: 22px;}
     100% {top: 18px;}
 }
+
+* {-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
+    -webkit-perspective: 1000; -moz-perspective: 1000; -ms-perspective: 1000; perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);}
 
 body {font-family: "ProximaNova Regular", sans-serif;}
 h2 {padding:10px 0; font-size: 48px; color: #06090b; text-align: left;}
@@ -95,13 +139,19 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .module-Header .fui-button {float: right; margin: 5px 35px 0 0; pointer-events: auto;}
 
 .page-Section {position: relative; background: #000;}
-.page-Section .section {position: absolute; top: 22px; right: 72px; bottom: 22px; left: 72px;}
+.page-Section .scale {position: absolute; top: 22px; bottom: 22px; right: 72px; left: 72px; z-index: 3; /*opacity: 0; -webkit-transition: .6s ease all, .3s ease -webkit-transform; transition: .6s ease all, .3s ease transform; -webkit-transform: scale(.9,.9); transform: scale(.9,.9);*/}
+.page-Section .scale.no-scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1); -webkit-transition: 0s ease -webkit-transform; transition: 0s ease transform;*/}
+.page-Section .section {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+.page-Section.active .scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1);*/}
 
-.Section-Learn {background: top center no-repeat; background-size: cover; background-color: #13263b; text-align: center;}
+.page-Section.active .Section-Learn--content .fui-button {-webkit-animation: 3s ease fadeInTop1s 1; animation: 3s ease fadeInTop1s 1;}
+.Section-Learn {background-color: #13263b; text-align: center;}
+.Section-Learn::before {content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: center no-repeat; background-size: cover; -webkit-animation: 2s ease scaleOut 1; animation: 2s ease scaleOut 1;}
+.Section-Learn .module-Header {-webkit-animation: 1.6s ease fadeIn 1; animation: 1.6s ease fadeIn 1;}
 .Section-Learn .module-Header--logo::before {background-image: url('../sprites/Header-logo.png');}
 .Section-Learn .module-Header .fui-button {color: #fff;}
-.Section-Learn--content h1 {line-height: 72px; font-size: 60px; font-weight: 700; /*font-family: "ProximaNova Semibold";*/ color: #f9f9f9;}
-.Section-Learn--content .description {padding: 5px 0 25px; font-size: 36px; color: #1ed775;}
+.Section-Learn--content h1 {line-height: 72px; font-size: 60px; font-weight: 700; /*font-family: "ProximaNova Semibold";*/ color: #f9f9f9; -webkit-animation: 1.2s ease fadeInTop 1; animation: 1.2s ease fadeInTop 1;}
+.Section-Learn--content .description {padding: 5px 0 25px; font-size: 36px; color: #1ed775; -webkit-animation: 1.6s ease fadeIn1s 1; animation: 1.6s ease fadeIn1s 1;}
 .Section-Learn--content .fui-button {padding-right: 30px; border-color: rgba(255,255,255,.10); color: #fff;}
 .Section-Learn--content .fui-button::before {content: ""; position: absolute; top: 26px; right: 30px; width: 10px; height: 2px; background: #fff; -webkit-transform: rotateZ(45deg);  transform: rotateZ(45deg);  -webkit-animation: 1s linear infinite jumping; animation: 1s linear infinite jumping;}
 .Section-Learn--content .fui-button::after  {content: ""; position: absolute; top: 26px; right: 24px; width: 10px; height: 2px; background: #fff; -webkit-transform: rotateZ(-45deg); transform: rotateZ(-45deg); -webkit-animation: 1s linear infinite jumping; animation: 1s linear infinite jumping;}
@@ -109,17 +159,20 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Learn--footer .footer {display: inline-block; padding: 0 30px 0 0; font-size: 20px; color: #e5f7f7; vertical-align: middle;}
 .Section-Learn--footer::after {display: inline-block; content: ""; width: 400px; height: 50px; background: url('../sprites/Section-Learn--footer.png') center/100%; vertical-align: middle;}
 
-.Section-Norisk  .section {background: top center no-repeat; background-size: cover; background-color: #e2e4e1; text-align: center;}
+.Section-Norisk .scale {background-color: #e2e4e1;}
+.Section-Norisk  .section {background: top center no-repeat; background-size: cover; text-align: center;}
 .Section-Norisk  .section ul {padding: 0 0 20px; font-size: 18px; color: #000; text-transform: uppercase; letter-spacing: 1.5px;}
 .Section-Norisk  .section ul>li {margin: 0 30px; height: 32px; line-height: 32px; border-bottom: 2px solid transparent; opacity:.60; -webkit-transition: .6s ease opacity; transition: .6s ease opacity;}
 .Section-Norisk  .section ul>li.active {border-color: #ff002a; opacity:1;}
 .Section-Norisk  .section h2 {text-align: center;}
 .Section-Norisk  .section .fui-description {padding: 20px 0 0;}
 
-.Section-Clarify .section {background: top center no-repeat; background-size: cover; background-color: #f9f9f9;}
+.Section-Trust .scale {background-color: #f9f9f9;}
+.Section-Clarify .section {background: top center no-repeat; background-size: cover;}
 .Section-Clarify .section .fui-description {max-width: 460px;}
 
-.Section-Trust   .section {background: top center no-repeat; background-size: cover; background-color: #f9f9f9;}
+.Section-Trust .scale {background-color: #f9f9f9;}
+.Section-Trust   .section {background: top center no-repeat; background-size: cover;}
 .Section-Trust   .section ul {padding: 15px 0 0;}
 .Section-Trust   .section ul>li {display: inline-block;}
 .Section-Trust   .section ul>li.brand-grey::before    {content: ""; display: inline-block; width: 260px; height: 150px; background: url('../sprites/Section-Trust--brand-grey.png')      center/100%; margin: 0 17px 0 -17px;}
@@ -128,15 +181,18 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Trust   .section ul>li.brand-storia::before  {content: ""; display: inline-block; width: 150px; height: 150px; background: url('../sprites/Section-Trust--brand-storia.png') center/100%; margin: 0 -40px 0 12px;}
 .Section-Trust   .section .fui-description {max-width: 960px;}
 
-.Section-Logic   .section {background: top center no-repeat; background-size: cover; background-color: #f7efed;}
+.Section-Logic .scale {background-color: #f7efed;}
+.Section-Logic   .section {background: top center no-repeat; background-size: cover;}
 .Section-Logic   .section ul {display: inline-block; padding: 30px 0 0; width: 100%;}
 .Section-Logic   .section ul>li {display: inline-block; float: left; padding: 0 5% 0 0; width: 25%; line-height: 32px; font-size: 20px; color: #06090b; box-sizing: border-box; vertical-align: top;}
 .Section-Logic   .section ul>li::before {content: ""; display: block; margin: 0 0 10px; width: 40px; height: 40px; background: url('../sprites/Section-Logic--list.png') center/100%;}
 
-.Section-Apps    .section {background: top center no-repeat; background-size: cover; background-color: #f9f9f9;}
+.Section-Apps .scale {background-color: #f9f9f9;}
+.Section-Apps    .section {background: top center no-repeat; background-size: cover;}
 .Section-Apps    .section .icons::before {content: ""; display: block; margin: 0 -5px 10px; width: 340px; height: 120px; background: url('../sprites/Section-Apps--devices.png') center/100%;}
 
-.Section-Storia  .section {background: top center no-repeat; background-size: cover; background-color: #202010;}
+.Section-Storia .scale {background-color: #202010;}
+.Section-Storia  .section {background: top center no-repeat; background-size: cover;}
 .Section-Storia  .section::before {content: ""; position: absolute; right: 0; bottom: 0;}
 .Section-Storia  .section .module-Header--logo::before {background-image: url('../sprites/Header-logo.png');}
 .Section-Storia  .section .module-Header .fui-button {color: #fff;}
@@ -147,7 +203,8 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Storia  .section .cell .fui-button::before {content: ""; position: absolute; top: 15px; right: 18px; width: 5px; height: 5px; border-top: 2px solid #fff; border-right: 2px solid #fff;}
 .Section-Storia  .section .cell .fui-button::after  {content: ""; position: absolute; top: 18px; right: 17px; width:10px; height: 2px; background: #fff; -webkit-transform: rotateZ(-45deg); transform: rotateZ(-45deg);}
 
-.Section-Team    .section {background: top center no-repeat; background-size: cover; background-color: #f9f9f9;}
+.Section-Team .scale {background-color: #f9f9f9;}
+.Section-Team    .section {background: top center no-repeat; background-size: cover;}
 .Section-Team    .section ul {display: inline-block; padding: 15px 0 0; max-width: 104px; white-space: nowrap;}
 .Section-Team    .section ul>li {position: relative; display: inline-block; margin: 16px -17px 0 0;}
 .Section-Team    .section ul>li:nth-child(1) {z-index:15;}
@@ -171,16 +228,20 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Team    .section .link {display: block; padding: 20px 0 0;}
 .Section-Team    .section .link::before {content: ""; display: inline-block; width: 28px; height: 28px; background: url('../sprites/Section-Team--linkedin.png') center/100%;}
 
-.Section-World {background: #eee; pointer-events: none;}
+.Section-World .scale {background-color: #efefef;}
+.Section-World {pointer-events: none;}
+.Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
 .Section-World .map-container::before {content: ""; position: absolute; top: 0; right: 0; left: 0; height: 50%; pointer-events: auto; z-index: 2;}
 .Section-World .map-container .map {position: absolute!important; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: auto;}
+.Section-World .map-container .map,
+.Section-World .map-container .map * {-webkit-transform: none!important;}
 .Section-World .map-container .border-tl {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2;}
 .Section-World .map-container .border-tl::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 22px; background: #000; z-index: 2;}
 .Section-World .map-container .border-tl::after  {content: ""; position: absolute; top: 0; left: 0; width: 72px; height: 100%; background: #000; z-index: 2;}
 .Section-World .map-container .border-br {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2;}
 .Section-World .map-container .border-br::before {content: ""; position: absolute; bottom: 0; right: 0; width: 100%; height: 22px; background: #000; z-index: 2;}
 .Section-World .map-container .border-br::after  {content: ""; position: absolute; bottom: 0; right: 0; width: 72px; height: 100%; background: #000; z-index: 2;}
-.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg'); background-color: #efefef; z-index: 3;}
+.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg'); z-index: 3;}
 .Section-World .section .container {padding: 50px; background: #fff; pointer-events: auto;}
 .Section-World .section ul {padding: 20px 0;}
 .Section-World .section ul>li {display: inline-block; padding: 0 25px 0 0;}
@@ -235,7 +296,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 
 
 @media only screen and (min-width: 769px), screen and (min-height: 661px) {
-    .Section-Learn  {background-image: url('../images/Section-Learn.jpg');}
+    .Section-Learn::before {background-image: url('../images/Section-Learn.jpg');}
     .Section-Norisk {}
     .Section-Norisk  .section {background-image: url('../images/Section-Norisk.jpg');}
     .Section-Clarify .section {background-image: url('../images/Section-Clarify.jpg');}
@@ -262,6 +323,8 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .module-Header {padding: 18px 0 0; min-height: 40px;}
     .module-Header .fui-button {margin: 0 13px 0 0;}
 
+    .page-Section .scale,
+    .page-Section.active .scale,
     .page-Section .section {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
 
     .Section-Trust .section ul {padding: 0 0 0 32px; white-space: nowrap; max-width: 100px;}
