@@ -124,9 +124,6 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 #fp-nav ul>li {display: block; margin: 13px 0;}
 #fp-nav ul>li a {display: block; height: 10px; width: 10px; background: #fff; border-radius: 50%; opacity: .3; -webkit-transition: .6s ease opacity; transition: .6s ease opacity;}
 #fp-nav ul>li a.active {opacity: 1;}
-.fp-slidesContainer {width: auto!important;}
-.fp-slidesContainer .fp-slide {width: 100px!important;}
-.fp-slidesContainer .fp-tableCell {height: 50px!important;}
 
 .fui-button {position: relative; display: inline-block; background: transparent; min-width: 190px; padding: 0 15px; height: 54px; line-height: 54px; /*font-family: "ProximaNova Semibold";*/ font-size: 20px; font-weight: 300; text-align: center; color: #000; box-sizing: border-box; border: 2px solid #1ed775; border-radius: 27px; cursor: pointer; white-space: nowrap; -webkit-appearance: none; appearance: none; -webkit-user-select: none; user-select: none;}
 .fui-button.progress {opacity: 0.5; pointer-events: none;}
@@ -169,6 +166,9 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Norisk  .section ul>li.active {border-color: #ff002a; opacity:1;}
 .Section-Norisk  .section h2 {text-align: center;}
 .Section-Norisk  .section .fui-description {padding: 20px 0 0;}
+.Section-Norisk .fp-slidesContainer {width: 700px!important; margin: 0 auto; -webkit-transform: none!important; transform: none!important;}
+.Section-Norisk .fp-slidesContainer .fp-slide {width: 100px!important;}
+.Section-Norisk .fp-slidesContainer .fp-tableCell {height: 50px!important;}
 
 .Section-Clarify .scale {background-color: #f9f9f9;}
 .Section-Clarify .section {background: top center no-repeat; background-size: cover;}
@@ -186,9 +186,10 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 
 .Section-Logic .scale {background-color: #f7efed;}
 .Section-Logic   .section {background: top center no-repeat; background-size: cover;}
-.Section-Logic   .section ul {display: inline-block; padding: 30px 0 0; width: 100%;}
-.Section-Logic   .section ul>li {display: inline-block; float: left; padding: 0 5% 0 0; width: 25%; line-height: 32px; font-size: 20px; color: #06090b; box-sizing: border-box; vertical-align: top;}
-.Section-Logic   .section ul>li::before {content: ""; display: block; margin: 0 0 10px; width: 40px; height: 40px; background: url('../sprites/Section-Logic--list.png') center/100%;}
+.Section-Logic .fp-slidesContainer {width: 200%!important; white-space: nowrap; padding: 30px 0 0;}
+.Section-Logic .fp-slidesContainer .fp-slide {width: 13%!important; display: inline-block; padding: 0 0 0 4%; width: 25%; line-height: 32px; font-size: 20px; color: #06090b; box-sizing: border-box; vertical-align: top; white-space: normal;}
+.Section-Logic .fp-slidesContainer .fp-slide::before {content: ""; display: block; margin: 0 0 10px; width: 40px; height: 40px; background: url('../sprites/Section-Logic--list.png') center/100%;}
+.Section-Logic .fp-slidesContainer .fp-tableCell {height: 130px!important;}
 
 .Section-Apps .scale {background-color: #f9f9f9;}
 .Section-Apps    .section {background: top center no-repeat; background-size: cover;}
@@ -334,9 +335,9 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Trust .section ul>li.brand-wwf::before     {width: 35px;  height: 35px;}
     .Section-Trust .section ul>li.brand-zendesk::before {width: 93px;  height: 35px;}
     .Section-Trust .section ul>li.brand-storia::before  {width: 35px;  height: 35px;}
-    .Section-Trust .section .overflow {margin: 0 -32px 0; overflow: hidden; height: 75px;}
+    .Section-Trust .section .overflow {margin: 0 -32px 0; /*overflow: hidden;*/ height: 75px;}
     .Section-Trust .section .overflow {height: 35px;}
-    .Section-Trust .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Trust .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; /*overflow-x: scroll;*/ /*-webkit-overflow-scrolling: touch;*/}
 
     .Section-Learn {background-image: url('../images/Section-Learn--small.jpg');}
     .Section-Learn--content h1 {line-height: 34px; font-size: 28px;}
@@ -352,8 +353,8 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Norisk .section ul {padding: 0 0 20px 40%; white-space: nowrap; max-width: 100px; font-size: 14px; box-sizing: border-box;}
     .Section-Norisk .section ul>li {margin: 0 10px;}
     .Section-Norisk .section .fui-description {padding: 0;}
-    .Section-Norisk .section .overflow {margin: 0 -32px 0; overflow: hidden;}
-    .Section-Norisk .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Norisk .section .overflow {margin: 0 -32px 0; /*overflow: hidden;*/}
+    .Section-Norisk .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; /*overflow-x: scroll;*/ /*-webkit-overflow-scrolling: touch;*/}
 
     .Section-Clarify .section {background-image: url('../images/Section-Clarify--small.jpg'); background-position-y: 120%;}
     .Section-Clarify .fui-table .table-cell {padding-bottom: 20px; vertical-align: bottom;}
@@ -363,8 +364,9 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Logic .section ul {padding: 10px 0 0 32px; max-width: 100px; white-space: nowrap;}
     .Section-Logic .section ul>li {float: none; width: 125%; line-height: 20px; font-size: 16px; white-space: normal;}
     .Section-Logic .section ul>li::before {width: 30px; height: 30px;}
-    .Section-Logic .section .overflow {margin: 0 -32px 0; overflow: hidden;}
-    .Section-Logic .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Logic .section .overflow {margin: 0 -32px 0; /*overflow: hidden;*/}
+    .Section-Logic .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; /*overflow-x: scroll;*/ /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Logic .fp-slidesContainer .fp-slide {width: 170px!important; display: inline-block; padding: 0 0 0 42px;}
 
     .Section-Apps  .section .icons::before {margin: 0 -10px 10px; width: 227px; height: 80px;}
     .Section-Apps  .section .fui-description {padding: 15px 0 0;}
