@@ -2,10 +2,31 @@
 <html itemscope="" itemtype="http://schema.org/WebPage" lang="en" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Frumatic Test</title>
-    <link rel="stylesheet" type="text/css" href="styles/common.css" />
+    <title>Frumatic</title>
+    <link rel="stylesheet" type="text/css" href="styles/test.css" />
     <!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="styles/ie8.css" /><![endif]-->
     <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="styles/ie7.css" /><![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="60x60"   href="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_60,q_90,w_60/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <link rel="apple-touch-icon" sizes="76x76"   href="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_76,q_90,w_76/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_120,q_90,w_120/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_152,q_90,w_152/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <meta property="og:title" content="Frumatic" />
+    <meta property="og:url" content="http://www.frumatic.com/" />
+    <meta property="og:image" content="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_300,q_90,w_300/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <meta property="og:site_name" content="Frumatic" />
+    <meta property="og:description" content="Being Guided and Frumatic Together" />
+    <meta itemprop="name" content="Frumatic" />
+    <meta itemprop="description" content="Being Guided and Frumatic Together" />
+    <meta itemprop="image" content="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_300,q_90,w_300/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Frumatic" />
+    <meta name="twitter:description" content="Being Guided and Frumatic Together" />
+    <meta name="twitter:image" content="http://res.cloudinary.com/hrscywv4p/image/upload/c_fill,g_faces:center,h_300,q_90,w_300/v1/92951/BeyondHourly_Logo2_cjksus.png" />
+    <meta name="description" content="Being Guided and Frumatic Together" />
+    <meta name="keywords" content="Design, Design Thinking, Cloud, Cloud Computing, Nearshore, Software Development, UX Design, Salesforce.com, Heroku, Scala" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1, minimum-scale=1, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/forms.js"></script>
@@ -13,6 +34,7 @@
     <script>
         $(document).ready(function() {
             $('#page-Section').fullpage({
+                anchors: ['home', 'risk', 'clarify', 'trust', 'logic', 'apps', 'storia', 'world', 'contact'],
                 //Navigation
                 menu: false,
                 navigation: true,
@@ -61,6 +83,10 @@
             });
             $('.buttonTouch').click(function(){
                 $.fn.fullpage.moveTo(9);
+                $('.page-Section .scale').addClass('no-scale');
+                setTimeout(function(){
+                    $('.page-Section .scale').removeClass('no-scale');
+                }, 1000)
             });
         });
     </script>
@@ -124,28 +150,30 @@
             </div>
         </div>
         <div class="page-Section Section-Norisk">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell">
-                            <div class="overflow">
-                                <div class="overflow-cell">
-                                    <ul>
-                                        <li class="active">Risk</li>
-                                        <li>Cost</li>
-                                        <li>Talent</li>
-                                        <li>Design</li>
-                                        <li>Team</li>
-                                    </ul>
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell">
+                                <div class="overflow">
+                                    <div class="overflow-cell">
+                                        <ul>
+                                            <li class="active">Risk</li>
+                                            <li>Cost</li>
+                                            <li>Talent</li>
+                                            <li>Design</li>
+                                            <li>Team</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <h2>Pay for deliverables, not hours</h2>
-                            <div class="fui-description">
-                                Nearshore UX design and software development
+                                <h2>Pay for deliverables, not hours</h2>
+                                <div class="fui-description">
+                                    Nearshore UX design and software development
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -153,18 +181,20 @@
             </div>
         </div>
         <div class="page-Section Section-Clarify">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell">
-                            <h2>Clarify</h2>
-                            <h3>Mutual Value Discovery</h3>
-                            <div class="fui-description">
-                                We work with established and startup enterprises as true partners, to create a clear engagement, where you pay for deliverables, not hours that we work.
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell">
+                                <h2>Clarify</h2>
+                                <h3>Mutual Value Discovery</h3>
+                                <div class="fui-description">
+                                    We work with established and startup enterprises as true partners, to create a clear engagement, where you pay for deliverables, not hours that we work.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,28 +202,30 @@
             </div>
         </div>
         <div class="page-Section Section-Trust">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell">
-                            <h2>We are trusted</h2>
-                            <h3>we work BOTH with huge brands and startups</h3>
-                            <div class="overflow">
-                                <div class="overflow-cell">
-                                    <ul>
-                                        <li class="brand-grey"></li>
-                                        <li class="brand-wwf"></li>
-                                        <li class="brand-zendesk"></li>
-                                        <li class="brand-storia"></li>
-                                    </ul>
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell">
+                                <h2>We are trusted</h2>
+                                <h3>we work BOTH with huge brands and startups</h3>
+                                <div class="overflow">
+                                    <div class="overflow-cell">
+                                        <ul>
+                                            <li class="brand-grey"></li>
+                                            <li class="brand-wwf"></li>
+                                            <li class="brand-zendesk"></li>
+                                            <li class="brand-storia"></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="fui-description">
-                                With IT we believe that less is more. We use prebuilt business logic wherever it is possible and then apply lean thinking, to simplify digital solutions for our clients.
+                                <div class="fui-description">
+                                    With IT we believe that less is more. We use prebuilt business logic wherever it is possible and then apply lean thinking, to simplify digital solutions for our clients.
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -201,23 +233,25 @@
             </div>
         </div>
         <div class="page-Section Section-Logic">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell">
-                            <h2>We apply reusable prebuilt business logic wherever possible, to reduce time and cost for our clients</h2>
-                            <div class="overflow">
-                                <div class="overflow-cell">
-                                    <ul>
-                                        <li>A clear discover phase removes <b>hours</b> from our payment model.</li>
-                                        <li>We contract for <b>deliverables</b>, paid for on pre-defined <b>acceptance</b>.</li>
-                                        <li><b>Deliverables</b> can be sized as a single <b>sprint</b> or a month's work.</li>
-                                        <li>Our teams are always <b>your teams</b> &mdash; dedicated, named talent.</li>
-                                    </ul>
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell">
+                                <h2>We apply reusable prebuilt business logic wherever possible, to reduce time and cost for our clients</h2>
+                                <div class="overflow">
+                                    <div class="overflow-cell">
+                                        <ul>
+                                            <li>A clear discover phase removes <b>hours</b> from our payment model.</li>
+                                            <li>We contract for <b>deliverables</b>, paid for on pre-defined <b>acceptance</b>.</li>
+                                            <li><b>Deliverables</b> can be sized as a single <b>sprint</b> or a month's work.</li>
+                                            <li>Our teams are always <b>your teams</b> &mdash; dedicated, named talent.</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -226,18 +260,20 @@
             </div>
         </div>
         <div class="page-Section Section-Apps">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell">
-                            <div class="icons"></div>
-                            <h2>We create enterprise and mobile apps, delivered on best-in-class public and private cloud platforms</h2>
-                            <div class="fui-description">
-                                Mobile-First design apps for any device: PC, tablets and smartphones
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell">
+                                <div class="icons"></div>
+                                <h2>We create enterprise and mobile apps, delivered on best-in-class public and private cloud platforms</h2>
+                                <div class="fui-description">
+                                    Mobile-First design apps for any device: PC, tablets and smartphones
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -245,20 +281,22 @@
             </div>
         </div>
         <div class="page-Section Section-Storia">
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell" itemscope itemtype="http://schema.org/Product">
-                            <h2>Right now<br />we are building <span itemprop="name">Storia</span></h2>
-                            <h3>A next generation social network platform</h3>
-                            <div class="fui-description">
-                                Storia is a great example of our current work. Storia is a new visual storytelling app to capture and share your interests in ongoing, interactive and group stories.
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell" itemscope itemtype="http://schema.org/Product">
+                                <h2>Right now<br />we are building <span itemprop="name">Storia</span></h2>
+                                <h3>A next generation social network platform</h3>
+                                <div class="fui-description">
+                                    Storia is a great example of our current work. Storia is a new visual storytelling app to capture and share your interests in ongoing, interactive and group stories.
+                                </div>
+                                <a class="fui-button" href="https://storia.me" target="_blank">See yourself</a>
                             </div>
-                            <a class="fui-button" href="https://storia.me" target="_blank">See yourself</a>
                         </div>
                     </div>
                 </div>
@@ -271,33 +309,35 @@
                 <div id="mapRU" class="map" style="diplay:none"></div>
                 <div id="mapUK" class="map"></div>
             </div>
-            <div class="section">
-                <div class="module-Header">
-                    <a class="module-Header--logo" href="/"></a>
-                    <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-                </div>
-                <div class="fui-table">
-                    <div class="table-cell">
-                        <div class="cell" itemscope itemtype="http://schema.org/Organization">
-                            <div class="container">
-                                <h2>We're working around the world</h2>
-                                <div class="fui-description">
-                                    At Frumatic we employ UX Designers, Data Scientists, Software Developers and Project Managers who are the best talent available for our nearshore centres in Moscow and Ufa, Russia.
+            <div class="scale">
+                <div class="section">
+                    <div class="module-Header">
+                        <a class="module-Header--logo" href="/"></a>
+                        <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+                    </div>
+                    <div class="fui-table">
+                        <div class="table-cell">
+                            <div class="cell" itemscope itemtype="http://schema.org/Organization">
+                                <div class="container">
+                                    <h2>We're working around the world</h2>
+                                    <div class="fui-description">
+                                        At Frumatic we employ UX Designers, Data Scientists, Software Developers and Project Managers who are the best talent available for our nearshore centres in Moscow and Ufa, Russia.
+                                    </div>
+                                    <ul id="mapNav" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                                        <li>
+                                            <a id="buttonUk" class="active" href="javascript:;">
+                                                <b itemprop="addressLocality">UK</b>
+                                                <span itemprop="streetAddress">86-90 Paul Street, London</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a id="buttonRu" href="javascript:;">
+                                                <b itemprop="addressLocality">Russia</b>
+                                                <span itemprop="streetAddress">ul. Chernyshevskogo, 82, 450076, Ufa</span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul id="mapNav" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                                    <li>
-                                        <a id="buttonUk" class="active" href="javascript:;">
-                                            <b itemprop="addressLocality">UK</b>
-                                            <span itemprop="streetAddress">86-90 Paul Street, London</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a id="buttonRu" href="javascript:;">
-                                            <b itemprop="addressLocality">Russia</b>
-                                            <span itemprop="streetAddress">ul. Chernyshevskogo, 82, 450076, Ufa</span>
-                                        </a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
