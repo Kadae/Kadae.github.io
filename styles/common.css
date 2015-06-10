@@ -228,8 +228,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Team    .section .link {display: block; padding: 20px 0 0;}
 .Section-Team    .section .link::before {content: ""; display: inline-block; width: 28px; height: 28px; background: url('../sprites/Section-Team--linkedin.png') center/100%;}
 
-.Section-World {background-color: #efefef;}
-.Section-World {pointer-events: none;}
+.Section-World {background-color: #efefef; pointer-events: none;}
 .Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden;}
 .Section-World .map-container::before {content: ""; position: absolute; top: 0; right: 0; left: 0; height: 50%; pointer-events: auto; z-index: 2;}
 .Section-World .map-container .map {position: absolute!important; right: 0; top: -30px; bottom: -30px; left: -70px; z-index: 1; pointer-events: auto;}
@@ -387,7 +386,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 
     .Section-World .map-container .border-tl,
     .Section-World .map-container .border-br {display: none;}
-    /*.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg');}*/
+    .Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg');}
     .Section-World .section .container {padding: 20px 30px;}
     .Section-World .section .fui-table .table-cell {padding: 0;}
     .Section-World .section .fui-description {padding: 5px 0;}
