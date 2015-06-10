@@ -139,10 +139,10 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .module-Header .fui-button {float: right; margin: 5px 35px 0 0; pointer-events: auto;}
 
 .page-Section {position: relative; background: #000;}
-.page-Section .scale {position: absolute; top: 22px; bottom: 22px; right: 72px; left: 72px; z-index: 3; /*opacity: 0; -webkit-transition: .6s ease all, .3s ease -webkit-transform; transition: .6s ease all, .3s ease transform; -webkit-transform: scale(.9,.9); transform: scale(.9,.9);*/}
-.page-Section .scale.no-scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1); -webkit-transition: 0s ease -webkit-transform; transition: 0s ease transform;*/}
+.page-Section .scale {position: absolute; top: 22px; bottom: 22px; right: 72px; left: 72px; z-index: 3; opacity: 0; -webkit-transition: .6s ease all, .3s ease -webkit-transform; transition: .6s ease all, .3s ease transform; -webkit-transform: scale(.9,.9); transform: scale(.9,.9);}
+.page-Section .scale.no-scale {opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1); -webkit-transition: 0s ease -webkit-transform; transition: 0s ease transform;}
 .page-Section .section {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
-.page-Section.active .scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1);*/}
+.page-Section.active .scale {opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1);}
 
 .page-Section.active .Section-Learn--content .fui-button {-webkit-animation: 3s ease fadeInTop1s 1; animation: 3s ease fadeInTop1s 1;}
 .Section-Learn {background-color: #13263b; text-align: center;}
