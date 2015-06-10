@@ -2,8 +2,8 @@
     font-family: "ProximaNova Regular";
     src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
     src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff")      format("woff"),
-         url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf")       format("truetype");
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff")      format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -11,8 +11,8 @@
     font-family: "ProximaNova Semibold";
     src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
     src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaBold/ProximaNovaBold.woff")      format("woff"),
-         url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf")       format("truetype");
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff")      format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -20,8 +20,8 @@
     font-family: "ProximaNova Bold";
     src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
     src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
-         url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff")      format("woff"),
-         url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf")       format("truetype");
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff")      format("woff"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf")       format("truetype");
     font-style: normal;
     font-weight:normal;
 }
@@ -110,9 +110,9 @@ a:visited {/*color: #fff;*/ text-decoration: none;}
     100% {top: 18px;}
 }
 
-/** {-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
-   -webkit-perspective: 1000; -moz-perspective: 1000; -ms-perspective: 1000; perspective: 1000;
-   -webkit-transform: translate3d(0,0,0);}*/
+* {-webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -ms-backface-visibility: hidden; backface-visibility: hidden;
+    -webkit-perspective: 1000; -moz-perspective: 1000; -ms-perspective: 1000; perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);}
 
 body {font-family: "ProximaNova Regular", sans-serif;}
 h2 {padding:10px 0; font-size: 48px; color: #06090b; text-align: left;}
@@ -141,7 +141,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .page-Section {position: relative; background: #000;}
 .page-Section .scale {position: absolute; top: 22px; bottom: 22px; right: 72px; left: 72px; z-index: 3; /*opacity: 0; -webkit-transition: .6s ease all, .3s ease -webkit-transform; transition: .6s ease all, .3s ease transform; -webkit-transform: scale(.9,.9); transform: scale(.9,.9);*/}
 .page-Section .scale.no-scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1); -webkit-transition: 0s ease -webkit-transform; transition: 0s ease transform;*/}
-.page-Section .section {position: fixed; top: 0; right: 0; bottom: 0; left: 0;}
+.page-Section .section {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
 .page-Section.active .scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1);*/}
 
 .page-Section.active .Section-Learn--content .fui-button {-webkit-animation: 3s ease fadeInTop1s 1; animation: 3s ease fadeInTop1s 1;}
@@ -167,7 +167,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Norisk  .section h2 {text-align: center;}
 .Section-Norisk  .section .fui-description {padding: 20px 0 0;}
 
-.Section-Trust .scale {background-color: #f9f9f9;}
+.Section-Clarify .scale {background-color: #f9f9f9;}
 .Section-Clarify .section {background: top center no-repeat; background-size: cover;}
 .Section-Clarify .section .fui-description {max-width: 460px;}
 
@@ -228,11 +228,11 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Team    .section .link {display: block; padding: 20px 0 0;}
 .Section-Team    .section .link::before {content: ""; display: inline-block; width: 28px; height: 28px; background: url('../sprites/Section-Team--linkedin.png') center/100%;}
 
-.Section-World .scale {background-color: #efefef;}
+.Section-World {background-color: #efefef;}
 .Section-World {pointer-events: none;}
-.Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+.Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden;}
 .Section-World .map-container::before {content: ""; position: absolute; top: 0; right: 0; left: 0; height: 50%; pointer-events: auto; z-index: 2;}
-.Section-World .map-container .map {position: absolute!important; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: auto;}
+.Section-World .map-container .map {position: absolute!important; right: 0; top: -30px; bottom: -30px; left: -70px; z-index: 1; pointer-events: auto;}
 .Section-World .map-container .map,
 .Section-World .map-container .map * {-webkit-transform: none!important;}
 .Section-World .map-container .border-tl {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2;}
@@ -241,7 +241,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-World .map-container .border-br {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2;}
 .Section-World .map-container .border-br::before {content: ""; position: absolute; bottom: 0; right: 0; width: 100%; height: 22px; background: #000; z-index: 2;}
 .Section-World .map-container .border-br::after  {content: ""; position: absolute; bottom: 0; right: 0; width: 72px; height: 100%; background: #000; z-index: 2;}
-.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg'); z-index: 3;}
+.Section-World .section {z-index: 3;}
 .Section-World .section .container {padding: 50px; background: #fff; pointer-events: auto;}
 .Section-World .section ul {padding: 20px 0;}
 .Section-World .section ul>li {display: inline-block; padding: 0 25px 0 0;}
@@ -306,7 +306,6 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Storia  .section {background-image: url('../images/Section-Storia.jpg');}
     .Section-Storia  .section::before {width: 618px; height: 475px; background-image: url('../images/Section-Storia--screens.png');}
     .Section-Team    .section ul>li:first-child {margin: 0 -25px 0 0;}
-    .Section-World  {}
     .Section-Touch  {background-image: url('../images/Section-Touch.jpg');}
 }
 @media only screen and (max-width: 768px), screen and (max-height: 661px) {
@@ -338,7 +337,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Trust .section ul>li.brand-storia::before  {width: 35px;  height: 35px;}
     .Section-Trust .section .overflow {margin: 0 -32px 0; overflow: hidden; height: 75px;}
     .Section-Trust .section .overflow {height: 35px;}
-    .Section-Trust .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Trust .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; -webkit-overflow-scrolling: touch;}
 
     .Section-Learn {background-image: url('../images/Section-Learn--small.jpg');}
     .Section-Learn--content h1 {line-height: 34px; font-size: 28px;}
@@ -355,7 +354,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Norisk .section ul>li {margin: 0 10px;}
     .Section-Norisk .section .fui-description {padding: 0;}
     .Section-Norisk .section .overflow {margin: 0 -32px 0; overflow: hidden;}
-    .Section-Norisk .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Norisk .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; -webkit-overflow-scrolling: touch;}
 
     .Section-Clarify .section {background-image: url('../images/Section-Clarify--small.jpg'); background-position-y: 120%;}
     .Section-Clarify .fui-table .table-cell {padding-bottom: 20px; vertical-align: bottom;}
@@ -366,7 +365,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Logic .section ul>li {float: none; width: 125%; line-height: 20px; font-size: 16px; white-space: normal;}
     .Section-Logic .section ul>li::before {width: 30px; height: 30px;}
     .Section-Logic .section .overflow {margin: 0 -32px 0; overflow: hidden;}
-    .Section-Logic .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; /*-webkit-overflow-scrolling: touch;*/}
+    .Section-Logic .section .overflow-cell {padding: 0 0 20px; margin: 0 0 -20px; overflow-x: scroll; -webkit-overflow-scrolling: touch;}
 
     .Section-Apps  .section .icons::before {margin: 0 -10px 10px; width: 227px; height: 80px;}
     .Section-Apps  .section .fui-description {padding: 15px 0 0;}
@@ -388,6 +387,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 
     .Section-World .map-container .border-tl,
     .Section-World .map-container .border-br {display: none;}
+    /*.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg');}*/
     .Section-World .section .container {padding: 20px 30px;}
     .Section-World .section .fui-table .table-cell {padding: 0;}
     .Section-World .section .fui-description {padding: 5px 0;}

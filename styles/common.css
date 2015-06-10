@@ -141,7 +141,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .page-Section {position: relative; background: #000;}
 .page-Section .scale {position: absolute; top: 22px; bottom: 22px; right: 72px; left: 72px; z-index: 3; /*opacity: 0; -webkit-transition: .6s ease all, .3s ease -webkit-transform; transition: .6s ease all, .3s ease transform; -webkit-transform: scale(.9,.9); transform: scale(.9,.9);*/}
 .page-Section .scale.no-scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1); -webkit-transition: 0s ease -webkit-transform; transition: 0s ease transform;*/}
-.page-Section .section {position: fixed; top: 0; right: 0; bottom: 0; left: 0;}
+.page-Section .section {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
 .page-Section.active .scale {/*opacity: 1; -webkit-transform: scale(1,1); transform: scale(1,1);*/}
 
 .page-Section.active .Section-Learn--content .fui-button {-webkit-animation: 3s ease fadeInTop1s 1; animation: 3s ease fadeInTop1s 1;}
@@ -167,7 +167,7 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Norisk  .section h2 {text-align: center;}
 .Section-Norisk  .section .fui-description {padding: 20px 0 0;}
 
-.Section-Trust .scale {background-color: #f9f9f9;}
+.Section-Clarify .scale {background-color: #f9f9f9;}
 .Section-Clarify .section {background: top center no-repeat; background-size: cover;}
 .Section-Clarify .section .fui-description {max-width: 460px;}
 
@@ -228,11 +228,11 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
 .Section-Team    .section .link {display: block; padding: 20px 0 0;}
 .Section-Team    .section .link::before {content: ""; display: inline-block; width: 28px; height: 28px; background: url('../sprites/Section-Team--linkedin.png') center/100%;}
 
-.Section-World .scale {background-color: #efefef;}
+.Section-World {background-color: #efefef;}
 .Section-World {pointer-events: none;}
-.Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+.Section-World .map-container {position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden;}
 .Section-World .map-container::before {content: ""; position: absolute; top: 0; right: 0; left: 0; height: 50%; pointer-events: auto; z-index: 2;}
-.Section-World .map-container .map {position: absolute!important; top: 0; right: 0; bottom: 0; left: 0; z-index: 1; pointer-events: auto;}
+.Section-World .map-container .map {position: absolute!important; right: 0; top: -30px; bottom: -30px; left: -70px; z-index: 1; pointer-events: auto;}
 .Section-World .map-container .map,
 .Section-World .map-container .map * {-webkit-transform: none!important;}
 .Section-World .map-container .border-tl {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2;}
@@ -306,8 +306,6 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Storia  .section {background-image: url('../images/Section-Storia.jpg');}
     .Section-Storia  .section::before {width: 618px; height: 475px; background-image: url('../images/Section-Storia--screens.png');}
     .Section-Team    .section ul>li:first-child {margin: 0 -25px 0 0;}
-    .Section-World .scale {background: transparent;}
-    .Section-World   .section {background-image: none;}
     .Section-Touch  {background-image: url('../images/Section-Touch.jpg');}
 }
 @media only screen and (max-width: 768px), screen and (max-height: 661px) {
@@ -387,10 +385,9 @@ h4 {padding: 15px 0 10px; font-size: 35px; color: #06090b; text-align: left;}
     .Section-Team .section .link {padding: 15px 0 0;}
     .Section-Team .section .link::before {width: 15px; height: 15px;}
 
-    .Section-World .map-container .map {opacity: 0;}
     .Section-World .map-container .border-tl,
     .Section-World .map-container .border-br {display: none;}
-    .Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg');}
+    /*.Section-World .section {background: top center no-repeat; background-size: cover; background-image: url('../images/Section-World--London.jpg');}*/
     .Section-World .section .container {padding: 20px 30px;}
     .Section-World .section .fui-table .table-cell {padding: 0;}
     .Section-World .section .fui-description {padding: 5px 0;}

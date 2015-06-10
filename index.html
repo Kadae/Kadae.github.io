@@ -14,6 +14,7 @@
     <script>
         $(document).ready(function() {
             $('#page-Section').fullpage({
+                anchors: ['home', 'risk', 'clarify', 'trust', 'logic', 'apps', 'storia', 'world', 'contact'],
                 //Navigation
                 menu: false,
                 navigation: true,
@@ -62,6 +63,10 @@
             });
             $('.buttonTouch').click(function(){
                 $.fn.fullpage.moveTo(9);
+                $('.page-Section .scale').addClass('no-scale');
+                setTimeout(function(){
+                    $('.page-Section .scale').removeClass('no-scale');
+                }, 1000)
             });
         });
     </script>
@@ -102,29 +107,30 @@
     </script>
 </head>
 <body>
-    <div id="page-Section" class="">
-        <div class="page-Section Section-Learn">
-            <div class="module-Header">
-                <a class="module-Header--logo" href="/"></a>
-                <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
-            </div>
-            <div class="Section-Learn--content fui-table">
-                <div class="table-cell">
-                    <div class="cell">
-                        <h1>
-                            UX Design and Software<br />
-                            Development Outsourcing
-                        </h1>
-                        <div class="description">&mdash; Deliverables, not hours</div>
-                        <a id="scrollDown" class="fui-button" href="javascript:;">Learn more</a>
-                    </div>
+<div id="page-Section" class="">
+    <div class="page-Section Section-Learn">
+        <div class="module-Header">
+            <a class="module-Header--logo" href="/"></a>
+            <a class="fui-button buttonTouch" href="javascript:;">Get in touch</a>
+        </div>
+        <div class="Section-Learn--content fui-table">
+            <div class="table-cell">
+                <div class="cell">
+                    <h1>
+                        UX Design and Software<br />
+                        Development Outsourcing
+                    </h1>
+                    <div class="description">&mdash; Deliverables, not hours</div>
+                    <a id="scrollDown" class="fui-button" href="javascript:;">Learn more</a>
                 </div>
             </div>
-            <div class="Section-Learn--footer">
-                <div class="footer">Our lovely clients:</div>
-            </div>
         </div>
-        <div class="page-Section Section-Norisk">
+        <div class="Section-Learn--footer">
+            <div class="footer">Our lovely clients:</div>
+        </div>
+    </div>
+    <div class="page-Section Section-Norisk">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -153,7 +159,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Clarify">
+    </div>
+    <div class="page-Section Section-Clarify">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -172,7 +180,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Trust">
+    </div>
+    <div class="page-Section Section-Trust">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -201,7 +211,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Logic">
+    </div>
+    <div class="page-Section Section-Logic">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -226,7 +238,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Apps">
+    </div>
+    <div class="page-Section Section-Apps">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -245,7 +259,9 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Storia">
+    </div>
+    <div class="page-Section Section-Storia">
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -265,13 +281,15 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-World">
-            <div class="map-container">
-                <div class="border-tl"></div>
-                <div class="border-br"></div>
-                <div id="mapRU" class="map" style="diplay:none"></div>
-                <div id="mapUK" class="map"></div>
-            </div>
+    </div>
+    <div class="page-Section Section-World">
+        <div class="map-container">
+            <div class="border-tl"></div>
+            <div class="border-br"></div>
+            <div id="mapRU" class="map" style="diplay:none"></div>
+            <div id="mapUK" class="map"></div>
+        </div>
+        <div class="scale">
             <div class="section">
                 <div class="module-Header">
                     <a class="module-Header--logo" href="/"></a>
@@ -305,89 +323,90 @@
                 </div>
             </div>
         </div>
-        <div class="page-Section Section-Touch">
-            <div class="module-Header">
-                <a class="module-Header--logo" href="/"></a>
-                <div class="module-Header--aside">
-                    <a class="email" href="mailto:info@frumatic.com">info@frumatic.com</a>
-                    <span class="phone">+7 (937) 498 02 94</span>
-                </div>
+    </div>
+    <div class="page-Section Section-Touch">
+        <div class="module-Header">
+            <a class="module-Header--logo" href="/"></a>
+            <div class="module-Header--aside">
+                <a class="email" href="mailto:info@frumatic.com">info@frumatic.com</a>
+                <span class="phone">+7 (937) 498 02 94</span>
             </div>
-            <div class="fui-table">
-                <div class="table-cell">
-                    <div class="cell">
-                        <div class="container">
-                            <div class="form">
-                                <h2>Get in touch</h2>
-                                <ul id="formNav" class="menu">
-                                    <li>
-                                        <a id="buttonHire" class="active" href="javascript:;">Hire us</a>
-                                    </li>
-                                    <li>
-                                        <a id="buttonResume" href="javascript:;">Send your resume</a>
-                                    </li>
-                                </ul>
-                                <form id="formHire" class="first">
-                                    <div class="inputs">
-                                        <input class="input" name="name" type="text" placeholder="Your name" />
-                                        <input class="input" name="email" type="text" placeholder="Your email or phone number" />
-                                        <textarea class="textarea" name="message" placeholder="Your message"></textarea>
-                                        <input class="fui-button submit" type="submit" value="Submit"/>
-                                    </div>
-                                    <div style="display: none;" class="info-error" id="form-error">Something went wrong. Please try again</div>
-                                    <div style="display: none;" class="info-success" id="form-success">Thanks for your submission!</div>
-                                </form>
-                                <form id="formResume" class="second" style="display: none;">
-                                    <div class="inputs">
-                                        <input class="input" name="name" type="text" placeholder="Your name" />
-                                        <input class="input" name="email" type="email" placeholder="Your email" />
-                                        <input class="input" name="link" type="text" placeholder="link to github, behance, etc" />
-                                        <textarea class="textarea" name="message" placeholder="Your message"></textarea>
-                                        <input class="fui-button submit" type="submit" value="Submit"/>
-                                        <div class="description">
-                                            <span class="file-name">Attach your cv </span>
-                                            <span class="attachment"></span>
-                                            <input class="file" type="file" name="file" /></div>
-                                    </div>
-                                    <div style="display: none;" class="info-error" id="form-error">Something went wrong. Please try again</div>
-                                    <div style="display: none;" class="info-success" id="form-success">Thanks for your submission!</div>
-                                </form>
-                            </div>
-                            <div class="address">
-                                <ul>
-                                    <li>
-                                        +7 (937) 498 02 94
-                                    </li>
-                                    <li>
-                                        <b itemprop="addressLocality">UK</b>
-                                        <span itemprop="streetAddress">86-90 Paul Street, London</span>
-                                    </li>
-                                    <li>
-                                        <b itemprop="addressLocality">Russia</b>
-                                        <span itemprop="streetAddress">ul. Chernyshevskogo, 82, <span itemprop="postalCode">450076</span>, Ufa</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer">
-                            <ul>
+        </div>
+        <div class="fui-table">
+            <div class="table-cell">
+                <div class="cell">
+                    <div class="container">
+                        <div class="form">
+                            <h2>Get in touch</h2>
+                            <ul id="formNav" class="menu">
                                 <li>
-                                    <a class="fb" href="https://www.facebook.com/frumatic" target="_blank"></a>
+                                    <a id="buttonHire" class="active" href="javascript:;">Hire us</a>
                                 </li>
                                 <li>
-                                    <a class="tw" href="https://twitter.com/frumatic" target="_blank"></a>
-                                </li>
-                                <li>
-                                    <a class="in" href="https://instagram.com/frumatic/" target="_blank"></a>
+                                    <a id="buttonResume" href="javascript:;">Send your resume</a>
                                 </li>
                             </ul>
-                            <a class="module-Header--logo" href="/"></a>
-                            <div class="text">&copy; <span itemprop="copyrightYear">2015</span> <span itemprop="copyrightYear">Frumatic LLC.</span> All rights reserved.</div>
+                            <form id="formHire" class="first">
+                                <div class="inputs">
+                                    <input class="input" name="name" type="text" placeholder="Your name" />
+                                    <input class="input" name="email" type="text" placeholder="Your email or phone number" />
+                                    <textarea class="textarea" name="message" placeholder="Your message"></textarea>
+                                    <input class="fui-button submit" type="submit" value="Submit"/>
+                                </div>
+                                <div style="display: none;" class="info-error" id="form-error">Something went wrong. Please try again</div>
+                                <div style="display: none;" class="info-success" id="form-success">Thanks for your submission!</div>
+                            </form>
+                            <form id="formResume" class="second" style="display: none;">
+                                <div class="inputs">
+                                    <input class="input" name="name" type="text" placeholder="Your name" />
+                                    <input class="input" name="email" type="email" placeholder="Your email" />
+                                    <input class="input" name="link" type="text" placeholder="link to github, behance, etc" />
+                                    <textarea class="textarea" name="message" placeholder="Your message"></textarea>
+                                    <input class="fui-button submit" type="submit" value="Submit"/>
+                                    <div class="description">
+                                        <span class="file-name">Attach your cv </span>
+                                        <span class="attachment"></span>
+                                        <input class="file" type="file" name="file" /></div>
+                                </div>
+                                <div style="display: none;" class="info-error" id="form-error">Something went wrong. Please try again</div>
+                                <div style="display: none;" class="info-success" id="form-success">Thanks for your submission!</div>
+                            </form>
                         </div>
+                        <div class="address">
+                            <ul>
+                                <li>
+                                    +7 (937) 498 02 94
+                                </li>
+                                <li>
+                                    <b itemprop="addressLocality">UK</b>
+                                    <span itemprop="streetAddress">86-90 Paul Street, London</span>
+                                </li>
+                                <li>
+                                    <b itemprop="addressLocality">Russia</b>
+                                    <span itemprop="streetAddress">ul. Chernyshevskogo, 82, <span itemprop="postalCode">450076</span>, Ufa</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <ul>
+                            <li>
+                                <a class="fb" href="https://www.facebook.com/frumatic" target="_blank"></a>
+                            </li>
+                            <li>
+                                <a class="tw" href="https://twitter.com/frumatic" target="_blank"></a>
+                            </li>
+                            <li>
+                                <a class="in" href="https://instagram.com/frumatic/" target="_blank"></a>
+                            </li>
+                        </ul>
+                        <a class="module-Header--logo" href="/"></a>
+                        <div class="text">&copy; <span itemprop="copyrightYear">2015</span> <span itemprop="copyrightYear">Frumatic LLC.</span> All rights reserved.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>

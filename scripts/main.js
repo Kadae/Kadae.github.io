@@ -2,14 +2,14 @@ $(document).ready(function() {
     $("#buttonUk").click(function() {
         $("#mapNav li a").removeClass("active");
         $(this).addClass("active");
-        $(".Section-World .section").css("background-image", "url(../images/Section-World--London.jpg)");
+        /*$(".Section-World .section").css("background-image", "url(../images/Section-World--London.jpg)");*/
         $("#mapUK").css("display", "block");
         $("#mapRU").css("display", "none");
     });
     $("#buttonRu").click(function() {
         $("#mapNav li a").removeClass("active");
         $(this).addClass("active");
-        $(".Section-World .section").css("background-image", "url(../images/Section-World--Ufa.jpg)");
+        /*$(".Section-World .section").css("background-image", "url(../images/Section-World--Ufa.jpg)");*/
         $("#mapUK").css("display", "none");
         $("#mapRU").css("display", "block");
     });
